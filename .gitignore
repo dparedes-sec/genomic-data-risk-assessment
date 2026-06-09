@@ -1,0 +1,59 @@
+# --- Secretos y credenciales ---
+.env
+.env.local
+secrets/
+*.key
+*.pem
+api_keys.txt
+credentials*
+
+# --- Capturas con datos reales ---
+evidence/real/
+evidence/production/
+evidence/temp/
+
+# --- Outputs de herramientas ---
+*.xml
+*.json
+burp-state*
+*.burp
+zap-session/
+.zaproxy/
+zap-report*
+
+# --- sqlmap output ---
+sqlmap_output/
+
+# --- Metasploit ---
+.msf4/
+*.rc.bak
+
+# --- Docker ---
+docker-data/
+dvwa-db/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+htmlcov/
+
+# --- Node.js ---
+node_modules/
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
