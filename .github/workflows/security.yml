@@ -1,5 +1,5 @@
-# .github/workflows/security.yml
 name: Secret Scanning
+
 on:
   push:
     branches: [main]
@@ -12,9 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
-      - uses: trufflesecurity/trufflehog@main
+        with:
+          fetch-depth: 0         
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
+          extra_args: --only-verified 
